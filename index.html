@@ -150,12 +150,13 @@
         }
 
         .amp-main {
-            padding: 5px;
-            position: relative;
-            top: 10px;
+
         }
 
         .amp-main-begin {
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
             margin-top: 7px;
         }
 
@@ -165,12 +166,23 @@
         }
 
         .amp-main-begin_p {
+            font-size: 1.5em;
+            line-height: normal;
             padding-top: 10px;
             text-indent: 10px;
         }
 
         .amp-main-begin_p:last-child {
             margin-bottom: 25px;
+        }
+
+        .amp-main-image_container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #amp-main-image_img {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -184,21 +196,41 @@
 <main class="amp-main">
     <section class="amp-main-begin">
         <h1 class="amp-main-begin_h1">Hello World!</h1>
-        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto consequatur consequuntur cumque dolor
+        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto consequatur
+            consequuntur cumque dolor
             eius error expedita illo in, nesciunt omnis provident quasi quos sapiente ullam unde velit veniam vero.</p>
-        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, architecto asperiores delectus error ex excepturi fugit impedit modi natus placeat recusandae reprehenderit tenetur, unde. Consequuntur corporis eum pariatur quisquam rerum!</p>
-        <amp-img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/311237/download-min-min.jpeg" width="400" height="400" layout="responsive" sizes="(min-width: 400px) 300px, 97vw"></amp-img>
-        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda dolor dolorum error hic incidunt perspiciatis possimus repudiandae, soluta ut. Accusamus cumque delectus dolorem necessitatibus odio quae unde, veniam voluptates.</p>
-        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A est, nemo. Atque consequatur corporis, delectus distinctio doloribus est explicabo facere, illum ipsum magni molestias neque nihil praesentium quod quos, suscipit!</p>
+        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, architecto
+            asperiores delectus error ex excepturi fugit impedit modi natus placeat recusandae reprehenderit tenetur,
+            unde. Consequuntur corporis eum pariatur quisquam rerum!</p>
+
+        <section class="amp-main-image_container">
+            <amp-img id="amp-main-image_img"
+                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/311237/download-min-min.jpeg" width="400"
+                     height="400" layout="responsive" sizes="(min-width: 768px) 500px, 100vw"></amp-img>
+        </section>
+
+        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda dolor
+            dolorum error hic incidunt perspiciatis possimus repudiandae, soluta ut. Accusamus cumque delectus dolorem
+            necessitatibus odio quae unde, veniam voluptates.</p>
+        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A est, nemo. Atque
+            consequatur corporis, delectus distinctio doloribus est explicabo facere, illum ipsum magni molestias neque
+            nihil praesentium quod quos, suscipit!</p>
     </section>
     <section class="amp-main-begin">
         <h1 class="amp-main-begin_h1">Hello World TIMES 2</h1>
-        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto consequatur consequuntur cumque dolor
+        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto consequatur
+            consequuntur cumque dolor
             eius error expedita illo in, nesciunt omnis provident quasi quos sapiente ullam unde velit veniam vero.</p>
-        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, architecto asperiores delectus error ex excepturi fugit impedit modi natus placeat recusandae reprehenderit tenetur, unde. Consequuntur corporis eum pariatur quisquam rerum!</p>
+        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, architecto
+            asperiores delectus error ex excepturi fugit impedit modi natus placeat recusandae reprehenderit tenetur,
+            unde. Consequuntur corporis eum pariatur quisquam rerum!</p>
         <amp-img src="welcome.jpg" alt="Welcome" height="400" width="800"></amp-img>
-        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda dolor dolorum error hic incidunt perspiciatis possimus repudiandae, soluta ut. Accusamus cumque delectus dolorem necessitatibus odio quae unde, veniam voluptates.</p>
-        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A est, nemo. Atque consequatur corporis, delectus distinctio doloribus est explicabo facere, illum ipsum magni molestias neque nihil praesentium quod quos, suscipit!</p>
+        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda dolor
+            dolorum error hic incidunt perspiciatis possimus repudiandae, soluta ut. Accusamus cumque delectus dolorem
+            necessitatibus odio quae unde, veniam voluptates.</p>
+        <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A est, nemo. Atque
+            consequatur corporis, delectus distinctio doloribus est explicabo facere, illum ipsum magni molestias neque
+            nihil praesentium quod quos, suscipit!</p>
     </section>
 </main>
 </body>

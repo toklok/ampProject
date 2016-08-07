@@ -2,7 +2,7 @@
 <html amp lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Curt is what my friend's call me.</title>
+    <title>Call me Curt</title>
     <link rel="canonical" href="http://example.ampproject.org/article-metadata.html" />
     <link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
@@ -18,13 +18,15 @@
         "telephone": "781-414-0523"
       }
     </script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <style amp-custom>
+
         /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+           v2.0 | 20110126
+           License: none (public domain)
+        */
 
         html, body, div, span, applet, object, iframe,
         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -78,7 +80,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: fixed;
             height: 150px;
+            top: 0;
+            z-index: 5;
             width: 100%;
             background-color: #000;
         }
@@ -124,16 +129,6 @@
             transition: color 0.4s cubic-bezier(.86,0,.07,1);
         }
 
-        /*.amp-figCaption_link-arrow {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-top: 20px solid #f00;
-        }*/
-
-
         .amp-figCaption_span-red {
             display: inline;
             text-transform: uppercase;
@@ -150,7 +145,8 @@
         }
 
         .amp-main {
-
+            position: relative;
+            top: 150px;
         }
 
         .amp-main-begin {
@@ -162,6 +158,7 @@
 
         .amp-main-begin_h1 {
             background-color: black;
+            text-shadow: 1px 3px 2px;
             color: red;
         }
 
@@ -169,6 +166,7 @@
             font-size: 1.5em;
             line-height: normal;
             padding-top: 10px;
+            margin-left: 5px;
             text-indent: 10px;
         }
 
@@ -183,6 +181,11 @@
 
         #amp-main-image_img {
             margin-top: 10px;
+        }
+
+        .amp-main-footer {
+            height: 25vh;
+            background-color: black;
         }
     </style>
 </head>
@@ -224,7 +227,12 @@
         <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, architecto
             asperiores delectus error ex excepturi fugit impedit modi natus placeat recusandae reprehenderit tenetur,
             unde. Consequuntur corporis eum pariatur quisquam rerum!</p>
-        <amp-img src="welcome.jpg" alt="Welcome" height="400" width="800"></amp-img>
+
+        <section class="amp-main-image_container">
+            <amp-img id="amp-main-image_img"
+                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/311237/fire-min.jpeg" width="400"
+                     height="400" layout="responsive" sizes="(min-width: 768px) 500px, 100vw"></amp-img>
+        </section>
         <p class="amp-main-begin_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda dolor
             dolorum error hic incidunt perspiciatis possimus repudiandae, soluta ut. Accusamus cumque delectus dolorem
             necessitatibus odio quae unde, veniam voluptates.</p>
@@ -232,6 +240,24 @@
             consequatur corporis, delectus distinctio doloribus est explicabo facere, illum ipsum magni molestias neque
             nihil praesentium quod quos, suscipit!</p>
     </section>
+    <footer class="amp-main-footer">
+        <h1>Here</h1>
+    </footer>
 </main>
+<amp-analytics type="googleanalytics" id="analytics1">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-53518718-2"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
+            }
+        }
+    </script>
+</amp-analytics>
 </body>
 </html>
